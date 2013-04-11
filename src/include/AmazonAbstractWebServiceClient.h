@@ -35,7 +35,7 @@ extern NSString *const AWSDefaultRunLoopMode;
 {
     AmazonCredentials *credentials;
     NSString          *endpoint;
-    NSInteger         maxRetries;
+    long              maxRetries;
     NSTimeInterval    timeout;
     NSTimeInterval    connectionTimeout;
     NSTimeInterval    delay;
@@ -50,7 +50,7 @@ extern NSString *const AWSDefaultRunLoopMode;
  *
  * Default is 5.
  */
-@property (nonatomic, assign) int maxRetries;
+@property (nonatomic, assign) long maxRetries;
 
 /** The amount of time to wait (in seconds) for a request to complete.  This
  * includes the time to establish connection and transfer data.

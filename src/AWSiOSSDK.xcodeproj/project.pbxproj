@@ -122,6 +122,7 @@
 		0AFD8D5612836353004B7863 /* AmazonWebServiceClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AFD8D5512836353004B7863 /* AmazonWebServiceClient.m */; };
 		0AFD8D6512836644004B7863 /* AmazonServiceRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AFD8D6312836644004B7863 /* AmazonServiceRequest.m */; };
 		0AFD8D6A1283667C004B7863 /* AmazonServiceResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AFD8D681283667C004B7863 /* AmazonServiceResponse.m */; };
+		0E414D9B16D412C8009D1194 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E414D9A16D412C8009D1194 /* Cocoa.framework */; };
 		3804CABA165194CA00FB6515 /* S3BucketLifecycleConfigurationTransitionUnmarshaller.m in Sources */ = {isa = PBXBuildFile; fileRef = 38EFF1751625DC390069348B /* S3BucketLifecycleConfigurationTransitionUnmarshaller.m */; };
 		3804CABB165194CA00FB6515 /* S3BucketLifecycleConfigurationTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 38EFF1761625DC390069348B /* S3BucketLifecycleConfigurationTransition.m */; };
 		3804CABC165194CA00FB6515 /* S3RestoreObjectResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 3830E61F1628801A000C443F /* S3RestoreObjectResponse.m */; };
@@ -3213,6 +3214,7 @@
 		0AFD8D681283667C004B7863 /* AmazonServiceResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = AmazonServiceResponse.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		0AFD8DC0128462A0004B7863 /* Framework.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Framework.plist; sourceTree = "<group>"; };
 		0AFD8DC312846390004B7863 /* Framework.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = Framework.sh; sourceTree = "<group>"; };
+		0E414D9A16D412C8009D1194 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
 		38078DA215262164006F384C /* AmazonDynamoDBClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AmazonDynamoDBClient.h; sourceTree = "<group>"; };
 		38078DA315262164006F384C /* DynamoDBAttributeValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DynamoDBAttributeValue.h; sourceTree = "<group>"; };
 		38078DA415262164006F384C /* DynamoDBAttributeValueUnmarshaller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DynamoDBAttributeValueUnmarshaller.h; sourceTree = "<group>"; };
@@ -6200,6 +6202,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E414D9B16D412C8009D1194 /* Cocoa.framework in Frameworks */,
 				CE96C1B7158BD58A0084D3CB /* MobileCoreServices.framework in Frameworks */,
 				AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */,
 			);
@@ -6219,6 +6222,7 @@
 		0867D691FE84028FC02AAC07 /* s3 */ = {
 			isa = PBXGroup;
 			children = (
+				0E414D9A16D412C8009D1194 /* Cocoa.framework */,
 				38EFE8FB161F54160069348B /* Amazon.AutoScaling */,
 				0AE6F15A12E4C0B700465F92 /* Amazon.CloudWatch */,
 				38078E5A1526217F006F384C /* Amazon.DynamoDB */,
@@ -12854,8 +12858,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"ARCHS[sdk=*]" = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				"ARCHS[sdk=macosx*]" = "$(ARCHS_STANDARD_64_BIT)";
 				CODE_SIGN_IDENTITY = "iPhone Developer: Yosuke Matsuda (9PGC836KKV)";
 				COPY_PHASE_STRIP = NO;
 				DOXYGEN_PATH = /Applications/Doxygen.app/Contents/Resources/doxygen;
@@ -12878,7 +12882,7 @@
 				);
 				PRODUCT_NAME = AWSiOSSDK;
 				PROVISIONING_PROFILE = "4B05C84C-01AB-4AA6-8A3E-8B8EA60E9912";
-				SDKROOT = iphoneos;
+				SDKROOT = macosx10.7;
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -12887,8 +12891,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"ARCHS[sdk=*]" = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				"ARCHS[sdk=macosx*]" = "$(ARCHS_STANDARD_64_BIT)";
 				CODE_SIGN_IDENTITY = "iPhone Developer: Yosuke Matsuda (9PGC836KKV)";
 				DSTROOT = /tmp/s3.dst;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -12911,7 +12915,7 @@
 				);
 				PRODUCT_NAME = AWSiOSSDK;
 				PROVISIONING_PROFILE = "4B05C84C-01AB-4AA6-8A3E-8B8EA60E9912";
-				SDKROOT = iphoneos;
+				SDKROOT = macosx10.7;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;

@@ -14,7 +14,7 @@
  */
 
 #import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
+#import <Cocoa/Cocoa.h>
 #import "AmazonClientException.h"
 
 #define AWS_SDK_VERSION              @"1.4.4"

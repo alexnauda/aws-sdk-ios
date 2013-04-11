@@ -29,9 +29,9 @@ then
 	echo "Cleaning Completed"
 	exit 0
 else
-	xcodebuild -configuration Release -project "AWSiOSSDK.xcodeproj" -target "AWSiOSSDK" -sdk iphoneos
-	xcodebuild -configuration Release -project "AWSiOSSDK.xcodeproj" -target "AWSiOSSDK" -sdk iphonesimulator
-
+    #xcodebuild -configuration Release -project "AWSiOSSDK.xcodeproj" -target "AWSiOSSDK" -sdk iphoneos
+    #xcodebuild -configuration Release -project "AWSiOSSDK.xcodeproj" -target "AWSiOSSDK" -sdk iphonesimulator
+    xcodebuild -configuration Release -project "AWSiOSSDK.xcodeproj" -target "AWSiOSSDK" -sdk macosx10.7
 
 	# This is the full name of the framework we'll  
 	# build  
